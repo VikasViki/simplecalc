@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Simple Calculator</title>
+    </head>
+<body bgcolor="blue">
+    <center><br>
+        <h1><font color="white" style="font size:70px">Simple Calculator</font></h1>
+        <hr size=20 color="black">
+        <div style="width:280px;background-color:lime;border-radius:8px">
+            <form name="Calculator" bgcolor="white">
+                <input name="display" placeholder="0" style="width:262px;height:60px;text-align:right;font-size:50px;border-radius:8px;margin:3px"/>
+                <br>
+                <input type="button" value="7" onclick="document.Calculator.display.value+='7'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="8" onclick="document.Calculator.display.value+='8'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="9" onclick="document.Calculator.display.value+='9'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="+" onclick="btnplus()" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/><br/>
+                <input type="button" value="4" onclick="document.Calculator.display.value+='4'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="5" onclick="document.Calculator.display.value+='5'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="6" onclick="document.Calculator.display.value+='6'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="-" onclick="btnsub()" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/><br/>
+                <input type="button" value="1" onclick="document.Calculator.display.value+='1'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="2" onclick="document.Calculator.display.value+='2'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="3" onclick="document.Calculator.display.value+='3'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="*" onclick="btnmult()" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/><br/>
+                <input type="button" value="0" onclick="document.Calculator.display.value+='0'" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="." onclick="btndot()" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="%" onclick="btnmod" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/>
+                <input type="button" value="/" onclick="btndiv()" style="width:60px;height:60px;font-size:50px;border-radius:8px;margin:3px"/><br/>
+                <input type="button" value="CLR" onclick="btnclear()" style="width:130px;height:60px;font-size:50px;border-radius:8px;margin:3px">
+                <input type="button" value="=" onclick="document.Calculator.display.value=eval(document.Calculator.display.value)" style="width:130px;height:60px;font-size:50px;border-radius:8px;margin:3px"/><br/>
+               
+            </form>
+        </div>
+    </center>
+    <hr size ="20" color="black">
+    
+    <script>
+        function btnplus()
+        {
+            document.Calculator.display.value+="+";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btnsub()
+        {
+            document.Calculator.display.value+="-";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btnmult()
+        {
+            document.Calculator.display.value+="*";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btndiv()
+        {
+            document.Calculator.display.value+="/";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btnmod()
+        {
+            document.Calculator.display.value+="%";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btndot()
+        {
+            document.Calculator.display.value+=".";
+            document.Calculator.display.style.textAlign="right";
+        }
+        function btnclear()
+        {
+            document.Calculator.display.value="";
+            document.Calculator.display.style.textAlign="right";
+        }
+    </script>
+   
+</body>
+</html>
